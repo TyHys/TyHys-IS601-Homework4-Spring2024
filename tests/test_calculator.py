@@ -1,18 +1,20 @@
-# test_calculator.py
+"""
+Module containing tests for the Calculator class.
+"""
 
 import pytest
 from calculator_mod.calculator import Calculator
 
 class TestCalculator:
     """
-    Test class for the Calculator class
+    Test class for the Calculator class.
     """
 
     def test_operations(self, testdata):
         """
-        Test operations of the Calculator class
+        Test operations of the Calculator class.
         """
-        for idx, (a, b, operation, expected) in enumerate(testdata):
+        for a, b, operation, expected in testdata:
             calculator = Calculator()
             if operation == "divide":
                 if b == 0:
